@@ -90,7 +90,7 @@ This microservice uses the following key dependencies:
 ##### Create envs in AWS Secrets Manager
 
 In AWS Secrets Manager, create a new secret named walletguru-auth-local with the following key-value pairs:
-```json
+```sh
     {
     "AWS\_ACCESS\_KEY\_ID":"", # AWS Access Key ID to access DynamoDB and Cognito
     "AWS\_SECRET\_ACCESS\_KEY":"", # AWS Secret Access Key to access DynamoDB and Cognito
@@ -154,7 +154,7 @@ This microservice uses the following key dependencies:
 ##### 3. Create envs in AWS Secrets Manager
 
 Create a secret in AWS Secrets Manager with the name walletguru-notification-local and the following key-value pairs:
-```json
+```sh
     {
     "AWS\_REGION":"",
     "AWS\_ACCESS\_KEY\_ID":"",
@@ -268,7 +268,7 @@ Important: Some apps validate the environment variables at runtime AND at build 
     docker run -p 3000:3000 --env-file ./.env 
 ```
 #### Envs for pipeline
-```json
+```sh
     BITBUCKET\_CLONE\_DIR: Directory where the repository is cloned for pnpm install
     NODE\_ENV: Environment of the application (development, qa, staging, production)
     NEXT\_PUBLIC\_ADMIN\_BASE\_URL: Base URL of the admin webapp
@@ -314,7 +314,7 @@ This microservice uses the following key dependencies:
 ###### 3. Create envs in AWS Secrets Manager
 
 Create a secret in AWS Secrets Manager with the name walletguru-wallet-local and the following key-value pairs:
-```json
+```sh
     {
     "AWS\_REGION": "", # AWS Region for the application
     "AWS\_ACCESS\_KEY\_ID": "", # AWS Access Key ID to access DynamoDB and Cognito
